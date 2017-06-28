@@ -13,7 +13,7 @@
   sudo apt-get -y install curl postgresql libpq-dev default-jre build-essential phantomjs &&
 
 #   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - &&
-  sudo apt-get install nodejs &&
+#   sudo apt-get install nodejs &&
 
   sudo apt-get -y install ack-grep vim libgnome2-bin &&
   
