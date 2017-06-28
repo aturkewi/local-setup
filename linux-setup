@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # shopt -q login_shell &&
-  sudo groupadd npm &&
+  if npm -q $group /etc/group
+    then
+      echo "npm group already exists"
+    else
+      sudo groupadd npm
+  fi &&
   sudo usermod -a -G npm,staff $USER &&
   sudo apt-get update -yqq &&
   sudo apt-get upgrade -yqq &&
