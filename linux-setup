@@ -1,9 +1,6 @@
 #!/bin/bash
 
 if [shopt -q login_shell];then
-  echo "Your terminal needs to be set as a login shell. Please follow the instructions in this link to accomplish this:"
-  echo "http://help.learn.co/workflow-tips/local-environment/how-to-set-your-ubuntu-terminal-as-a-login-shell"
-else
   sudo groupadd npm &&
   sudo usermod -a -G npm,staff $USER &&
   sudo apt-get update -yqq &&
@@ -57,4 +54,7 @@ else
   echo "========================================================="
   echo "Please go to learn.co/manual_setup and complete steps 9, 10, and 11"
   echo "And finally, download and install Chrome and the Atom text editor and you are all set to Learn!!"
+else
+  echo "Your terminal needs to be set as a login shell. Please follow the instructions in this link to accomplish this:"
+  echo "http://help.learn.co/workflow-tips/local-environment/how-to-set-your-ubuntu-terminal-as-a-login-shell"
 fi
