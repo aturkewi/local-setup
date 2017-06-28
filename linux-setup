@@ -12,25 +12,16 @@
   sudo apt-get upgrade -y &&
   sudo apt-get -y install curl postgresql libpq-dev default-jre build-essential phantomjs &&
 
-  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - &&
+#   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - &&
   sudo apt-get install nodejs &&
 
   sudo apt-get -y install ack-grep vim libgnome2-bin &&
-
-  sudo chown root:staff /usr/bin &&
-  sudo chmod 0775 /usr/bin &&
-  sudo chown root:staff /usr/local/bin &&
-  sudo chmod 0775 /usr/local/bin &&
-  sudo chown -R root:npm /usr/lib/local/node_modules &&
-  sudo chmod 0775 /usr/lib/local/node_modules &&
-
-  touch ~/.netrc && chmod 0600 ~/.netrc &&
-
+  
   gpg --keyserver hkp://pgp.mit.edu --recv-keys \
     409B6B1796C275462A1703113804BB82D39DC0E3 \
     7D2BAF1CF37B13E2069D6956105BD0E739499BDB &&
-  # \curl -sSL https://get.rvm.io | bash -s stable --ruby &&
-  \curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/stable/binscripts/rvm-installer | bash -s stable
+  \curl -sSL https://get.rvm.io | bash -s stable --ruby &&
+#   \curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/stable/binscripts/rvm-installer | bash -s stable
   curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/linux_bash_profile" -o "$HOME/.bash_profile" &&
   source ~/.bash_profile &&
   rvm install 2.3.1 &&
@@ -45,12 +36,20 @@
   gem install bundler &&
   gem install rails &&
 
+  touch ~/.netrc && chmod 0600 ~/.netrc &&
 
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash &&
   echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bash_profile &&
   echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm' | grep '\$' >> ~/.bash_profile &&
 
   source ~/.bash_profile &&
+
+  sudo chown root:staff /usr/bin &&
+  sudo chmod 0775 /usr/bin &&
+  sudo chown root:staff /usr/local/bin &&
+  sudo chmod 0775 /usr/local/bin &&
+  sudo chown -R root:npm /usr/lib/node_modules &&
+  sudo chmod 0775 /usr/lib/node_modules &&
 
   curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/irbrc" -o "$HOME/.irbrc" &&
   curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/ubuntu-gitignore" -o "$HOME/.gitignore" &&
