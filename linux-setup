@@ -24,6 +24,7 @@
   \curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/stable/binscripts/rvm-installer | bash -s stable &&
   curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/linux_bash_profile" -o "$HOME/.bash_profile" &&
   source ~/.bash_profile &&
+  rvm get stable --auto-dotfile &&
   rvm install 2.3.1 &&
   rvm use 2.3.1 --default &&
 
@@ -56,6 +57,8 @@
   curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/linux_gitconfig" -o "$HOME/.gitconfig" &&
 
   echo "=========================================================" &&
+  echo "AUTO SETUP COMPLETE!" &&
+  echo "PLEASE FOLLOW THE FOLLOWING STEPS TO FINISH THE SETUP PROCESS" &&
   echo "Please go to learn.co/manual_setup and complete steps 9, 10, and 11" &&
   echo "And finally, download and install Chrome and the Atom text editor and you are all set to Learn!!"
  
