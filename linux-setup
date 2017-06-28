@@ -1,6 +1,6 @@
 #!/bin/bash
 
-shopt -q login_shell ] &&
+shopt -q login_shell &&
   sudo groupadd npm &&
   sudo usermod -a -G npm,staff $USER &&
   sudo apt-get update -yqq &&
