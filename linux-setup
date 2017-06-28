@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [shopt -q login_shell];then
+if [ shopt -q login_shell ]; then
   sudo groupadd npm &&
   sudo usermod -a -G npm,staff $USER &&
   sudo apt-get update -yqq &&
