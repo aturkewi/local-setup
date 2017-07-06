@@ -10,6 +10,7 @@
   sudo usermod -a -G npm,staff $USER &&
   sudo apt-get update -y &&
   sudo apt-get upgrade -y &&
+  sudo apt-get install git -y &&
   sudo apt-get -y install curl postgresql libpq-dev default-jre build-essential phantomjs &&
 
 #   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - &&
@@ -24,11 +25,11 @@
   \curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/stable/binscripts/rvm-installer | bash -s stable &&
   curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/linux_bash_profile" -o "$HOME/.bash_profile" &&
   source ~/.bash_profile &&
-  rvm install 2.3.1 &&
-  rvm use 2.3.1 --default &&
+  rvm install 2.3.3 &&
+  rvm use 2.3.3 --default &&
 
   echo "gem: --no-ri --no-rdoc" > $HOME/.gemrc &&
-  gem update --system 2.4.8 &&
+  gem update --system 2.6.7 &&
   gem install learn-co &&
   gem install phantomjs &&
   gem install pg &&
