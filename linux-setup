@@ -10,7 +10,7 @@
   sudo usermod -a -G npm,staff $USER &&
   sudo apt-get update -y &&
   sudo apt-get upgrade -y &&
-  sudo apt-get install git
+  sudo apt-get install git -y &&
   sudo apt-get -y install curl postgresql libpq-dev default-jre build-essential phantomjs &&
 
 #   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - &&
