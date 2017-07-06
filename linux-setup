@@ -28,7 +28,7 @@
   rvm use 2.3.3 --default &&
 
   echo "gem: --no-ri --no-rdoc" > $HOME/.gemrc &&
-  gem update --system 2.4.8 &&
+  gem update --system 2.6.7 &&
   gem install learn-co &&
   gem install phantomjs &&
   gem install pg &&
